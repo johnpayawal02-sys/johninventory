@@ -1,0 +1,632 @@
+CRITICAL - 2022-11-19 22:32:10 --> syntax error, unexpected token "public"
+in APPPATH/Controllers/News.php on line 17.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH/Controllers/News.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\News')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\News')
+ 4 SYSTEMPATH/CodeIgniter.php(852): class_exists('\\App\\Controllers\\News', true)
+ 5 SYSTEMPATH/CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+CRITICAL - 2022-11-19 22:32:38 --> Class "BaseController" not found
+in APPPATH/Controllers/News.php on line 2.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(282): include_once()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH/Controllers/News.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\News')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\News')
+ 5 SYSTEMPATH/CodeIgniter.php(852): class_exists('\\App\\Controllers\\News', true)
+ 6 SYSTEMPATH/CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-19 22:33:16 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#7 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#12 {main}
+CRITICAL - 2022-11-19 22:33:16 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(10): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(902): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-19 22:35:25 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', 'masterkey', 'appstarter', 3306, '', 0)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#7 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#12 {main}
+CRITICAL - 2022-11-19 22:35:25 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(10): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(902): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-19 22:36:23 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', 'masterkey', 'appstarter', 3306, '', 0)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#7 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#12 {main}
+CRITICAL - 2022-11-19 22:36:23 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(10): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(902): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-19 22:37:33 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', 'masterkey', 'appstarter', 3306, '', 0)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#7 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#12 {main}
+CRITICAL - 2022-11-19 22:37:33 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(10): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(902): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-19 22:38:44 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', 'masterkey', 'appstarter', 3306, '', 0)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#7 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#12 {main}
+CRITICAL - 2022-11-19 22:38:44 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(10): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(902): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-19 22:42:07 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#7 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#12 {main}
+CRITICAL - 2022-11-19 22:42:07 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(10): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(902): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-19 22:42:48 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#7 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#12 {main}
+CRITICAL - 2022-11-19 22:42:48 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(10): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(902): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-19 22:47:48 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', 'masterkey', 'appstarter', 3306, '', 0)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#7 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#12 {main}
+CRITICAL - 2022-11-19 22:47:48 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(10): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(902): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-19 22:48:59 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', 'masterkey', 'appstarter', 3306, '', 0)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#7 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#12 {main}
+CRITICAL - 2022-11-19 22:48:59 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(10): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(902): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-19 22:49:04 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', 'masterkey', 'appstarter', 3306, '', 0)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#7 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#12 {main}
+CRITICAL - 2022-11-19 22:49:04 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(10): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(902): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-19 22:50:38 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', 'masterkey', 'appstarter', 3306, '', 0)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#7 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#12 {main}
+CRITICAL - 2022-11-19 22:50:38 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(10): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(902): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-19 22:52:40 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('localhost', 'root', 'masterkey', 'appstarter2', 3306, '', 0)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#7 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#12 {main}
+CRITICAL - 2022-11-19 22:52:40 --> Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(10): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(902): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
+ERROR - 2022-11-19 22:55:13 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'appstarter2' in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:171
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php(171): mysqli->real_connect('127.0.0.1', 'root', 'masterkey', 'appstarter2', 3306, '', 0)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'appstarter2' in /storage/emulated/0/htdocs/appstarter/system/Database/MySQLi/Connection.php:215
+Stack trace:
+#0 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 /storage/emulated/0/htdocs/appstarter/system/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 /storage/emulated/0/htdocs/appstarter/system/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 /storage/emulated/0/htdocs/appstarter/system/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 /storage/emulated/0/htdocs/appstarter/system/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 /storage/emulated/0/htdocs/appstarter/app/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 /storage/emulated/0/htdocs/appstarter/app/Controllers/News.php(10): App\Models\NewsModel->getNews()
+#7 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(902): App\Controllers\News->index()
+#8 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 /storage/emulated/0/htdocs/appstarter/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 /storage/emulated/0/htdocs/appstarter/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /storage/emulated/0/htdocs/appstarter/system/Commands/Server/rewrite.php(46): require_once('/storage/emulat...')
+#12 {main}
+CRITICAL - 2022-11-19 22:55:13 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'appstarter2'
+in SYSTEMPATH/Database/BaseConnection.php on line 418.
+ 1 SYSTEMPATH/Database/BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH/Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH/Models/NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH/Controllers/News.php(10): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH/CodeIgniter.php(902): App\Controllers\News->index()
+ 8 SYSTEMPATH/CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(46): require_once('FCPATH/index.php')
